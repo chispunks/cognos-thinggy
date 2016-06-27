@@ -1,0 +1,56 @@
+<report xmlns="http://developer.cognos.com/schemas/report/11.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='BICC']/folder[@name='S103_MES_COM_NMIC']/folder[@name='S103_MES_COM_NMIC_RED']/folder[@name='CUBOS']/package[@name='S103_01_CB_MIC_RED']/model[@name='2015-11-23T17:01:40.740Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><list horizontalPagination="true" name="List1" refQuery="Query1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_businesskey"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_businesskey"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_memberCaption"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_memberCaption"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_memberDescription"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_memberDescription"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_dimensionUniqueName"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_dimensionUniqueName"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_hierarchyUniqueName"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_hierarchyUniqueName"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_levelUniqueName"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_levelUniqueName"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_parentUniqueName"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_parentUniqueName"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="_memberUniqueName"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="_memberUniqueName"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents>
+								</pageBody>
+							</page>
+						</reportPages>
+					</layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-11-23T17:01:40.776Z" output="no"/></XMLAttributes><queries><query name="Query1">
+			<source>
+				<model/>
+			</source>
+			<selection><dataItem name="_businesskey"><expression>roleValue('_businessKey';[DataItem])</expression></dataItem><dataItem name="_memberCaption"><expression>roleValue('_memberCaption';[DataItem])</expression></dataItem><dataItem name="_memberDescription"><expression>roleValue('_memberDescription';[DataItem])</expression></dataItem><dataItem name="_dimensionUniqueName"><expression>roleValue('_dimensionUniqueName';[DataItem])</expression></dataItem><dataItem name="_hierarchyUniqueName"><expression>roleValue('_hierarchyUniqueName';[DataItem])</expression></dataItem><dataItem name="_levelUniqueName"><expression>roleValue('_levelUniqueName';[DataItem])</expression></dataItem><dataItem name="_parentUniqueName"><expression>roleValue('_parentUniqueName';[DataItem])</expression></dataItem><dataItem name="_memberUniqueName"><expression>roleValue('_memberUniqueName';[DataItem])</expression></dataItem><dataItem name="DataItem"><expression>[S103_01_CB_MIC_RED].[ACTIVIDAD COMERCIAL].[ACTIVIDAD COMERCIAL].[TECNICO]</expression></dataItem><dataItem name="Data Item1"><expression>[S103_01_CB_MIC_RED].[ACTIVIDAD COMERCIAL].[ACTIVIDAD COMERCIAL].[TIPO ACTIVIDAD]</expression></dataItem></selection>
+		</query></queries><reportName>Dimensional Functions</reportName></report>
